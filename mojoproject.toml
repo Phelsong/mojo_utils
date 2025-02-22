@@ -8,7 +8,7 @@ version = "0.1.0"
 
 [tasks]
 build_clr = "mojo build clr_recent.mojo -o dist/clr_recent;cd dist; sha256sum clr_recent > sha256sum.clr_recent.txt"
-pack_fss = "mojo package find_substring -o pack/find_substring.mojopkg; cd pack; sha256sum find_substring.mojopkg > sha256sum.find_substring.mojopkg.txt"
+pack_fss = "mojo package find_substring_dir -o pack/find_substring.mojopkg; cd pack; sha256sum find_substring.mojopkg > sha256sum.find_substring.mojopkg.txt"
 
 [dependencies]
-max = ">=24.5.0,<26"
+max = ">=25.1.0,<26"
