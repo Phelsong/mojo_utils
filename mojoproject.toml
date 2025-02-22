@@ -4,7 +4,7 @@ channels = ["conda-forge", "https://conda.modular.com/max"]
 description = "Add a short description here"
 name = "mojo_scratch"
 platforms = ["linux-64"]
-version = "0.1.0"
+version = "0.1.1"
 
 [tasks]
 build_clr = "mojo build clr_recent.mojo -o dist/clr_recent;cd dist; sha256sum clr_recent > sha256sum.clr_recent.txt"
