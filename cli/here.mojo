@@ -1,18 +1,19 @@
-from sys import argv
-from pathlib import Path, cwd
+from std.sys import argv
+from std.pathlib import Path, cwd
 
-fn main():
-    _here()
+
+def main():
+    await _here()
 
 
 @always_inline
-fn _here():
+async def _here():
     try:
         if len(argv()) > 1 and argv()[1] == ".":
             print(cwd())
         else:
             var location = cwd().listdir()
             for x in location:
-                print(x[])
+                print(x)
     except:
         pass

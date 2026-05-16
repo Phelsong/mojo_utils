@@ -1,8 +1,9 @@
-from sys import argv
-from pathlib import Path
+from std.sys import argv
+from std.pathlib import Path
 
-fn main():
-    var extensions = List[String](".txt", ".csv", ".py", ".sh", ".yaml",".toml" )
+
+def main():
+    var extensions = List[String](".txt", ".csv", ".py", ".sh", ".yaml", ".toml")
     var file = Path(argv()[1])
 
     if file.suffix() in extensions:

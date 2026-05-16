@@ -1,7 +1,7 @@
-from testing import assert_true
+from std.testing import assert_true
 
 
-fn find_substring(owned sir_str: String, owned substring: String) -> Bool:
+def find_substring(sir_str: String, substring: String) -> Bool:
     try:
         assert_true(len(sir_str) > 0)
         assert_true(len(substring) > 0)

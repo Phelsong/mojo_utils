@@ -1,9 +1,9 @@
-from os import getenv
-from testing import assert_true
-from pathlib import Path
+from std.os import getenv
+from std.testing import assert_true
+from std.pathlib import Path
 
 
-fn main():
+def main():
     var recent_cache: Path = Path(getenv("HOME")).joinpath(".local/share/recently-used.xbel")
     try:
         assert_true(recent_cache.exists())
