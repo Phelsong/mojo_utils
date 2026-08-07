@@ -16,6 +16,7 @@ build-isee = "mojo build cli/isee.mojo -o dist/isee -I modules"
 pack-fss = "mojo package modules/find_substring -o pack/find_substring.mojopkg; cd pack; sha256sum find_substring.mojopkg > sha256sum.find_substring.mojopkg.txt"
 pack-imencode = "mojo package modules/imencode -o pack/imencode.mojopkg; cd pack; sha256sum imencode.mojopkg > sha256sum.imencode.mojopkg.txt"
 pack-kitty = "mojo package modules/kitty_print -o pack/kitty_print.mojopkg; cd pack; sha256sum kitty_print.mojopkg > sha256sum.kitty_print.mojopkg.txt"
+install-bin = "cp ./dist/* ~/.local/bin"
 
 [dependencies]
 mojo = ">=1.0.0b1,<1.1"
