@@ -91,7 +91,11 @@ def imencode(
     elif ext == ".png":
         return imencode_png(pixels, width, height, channels)
     else:
-        raise ("imencode: unsupported format '" + ext + "'. Supported: .bmp, .ppm, .pgm, .png")
+        raise (
+            "imencode: unsupported format '"
+            + ext
+            + "'. Supported: .bmp, .ppm, .pgm, .png"
+        )
 
 
 # =====================================================
@@ -99,7 +103,9 @@ def imencode(
 # =====================================================
 
 
-def imencode_bmp(pixels: List[UInt8], width: Int, height: Int, channels: Int) raises -> List[UInt8]:
+def imencode_bmp(
+    pixels: List[UInt8], width: Int, height: Int, channels: Int
+) raises -> List[UInt8]:
     """Encode raw RGB pixel data as a BMP image (uncompressed, BI_RGB).
 
     BMP stores pixels bottom-to-top in BGR order. Rows are padded
@@ -171,7 +177,9 @@ def imencode_bmp(pixels: List[UInt8], width: Int, height: Int, channels: Int) ra
 # =====================================================
 
 
-def imencode_ppm(pixels: List[UInt8], width: Int, height: Int, channels: Int) raises -> List[UInt8]:
+def imencode_ppm(
+    pixels: List[UInt8], width: Int, height: Int, channels: Int
+) raises -> List[UInt8]:
     """Encode raw RGB pixel data as a PPM (P6 binary) image.
 
     Args:
@@ -201,7 +209,9 @@ def imencode_ppm(pixels: List[UInt8], width: Int, height: Int, channels: Int) ra
 # =====================================================
 
 
-def imencode_pgm(pixels: List[UInt8], width: Int, height: Int) raises -> List[UInt8]:
+def imencode_pgm(
+    pixels: List[UInt8], width: Int, height: Int
+) raises -> List[UInt8]:
     """Encode raw grayscale pixel data as a PGM (P5 binary) image.
 
     Args:
@@ -348,7 +358,9 @@ def write_png_chunk(
 # =====================================================
 
 
-def imencode_png(pixels: List[UInt8], width: Int, height: Int, channels: Int) raises -> List[UInt8]:
+def imencode_png(
+    pixels: List[UInt8], width: Int, height: Int, channels: Int
+) raises -> List[UInt8]:
     """Encode raw pixel data as a PNG image (stored blocks, no compression).
 
     Uses DEFLATE stored blocks — the pixel data is not compressed but
@@ -426,7 +438,9 @@ def imencode_png(pixels: List[UInt8], width: Int, height: Int, channels: Int) ra
 # =====================================================
 
 
-def to_data_uri(data: List[UInt8], mime_type: String = "image/png") raises -> String:
+def to_data_uri(
+    data: List[UInt8], mime_type: String = "image/png"
+) raises -> String:
     """Encode bytes as a data URI string.
 
     Args:
